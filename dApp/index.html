@@ -17,5 +17,13 @@
         <div>
             <button onclick="setMood()">set Mood</button>
         </div>
+
+        <script>
+            //enable etherum
+            window.etherum.enable();
+
+            //define an ethers provider
+            var provider = new ethers.providers.Web3provider(web3.currentProvider, "ropsten");
+        </script>
     </body>
 </html>
