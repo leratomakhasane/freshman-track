@@ -62,6 +62,16 @@
             
             var MoodContract
             var signer
+
+            //connect the signer to metamask account(use [0] as default), define contract object using contract address, ABI and signer
+            provider.listAccounts().then(function (accounts){
+                signer = provider.getSigner(accounts[0]);
+                MoodContract = new ethers.Contract(
+                    MoodContractAddress,
+                    MoodContractABI,
+                    signer
+                );
+            });
         </script>
     </body>
 </html>
