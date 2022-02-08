@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!--Connecting the solidity smart contract with the web page-->
-        <script charset="utf-8" src="https://cdn.ethers.io/scripts/ethers-v4.min.js" type="text/javascript"></script>
     </head>
     <body>
         <h1>This is Lerato's first dApp!</h1>
@@ -18,12 +16,18 @@
             <button onclick="setMood()">Set Mood</button>
         </div>
 
+        
+        <!--Connecting the solidity smart contract with the web page-->
+        <script charset="utf-8" src="https://cdn.ethers.io/scripts/ethers-v4.min.js" type="text/javascript"></script>
         <script>
             //enable etherum
-            window.etherum.enable();
+            window.ethereum.enable();
 
             //define an ethers provider
-            var provider = new ethers.providers.Web3provider(web3.currentProvider, "ropsten");
+            var provider = new ethers.providers.Web3Provider(
+                web3.currentProvider,
+                "ropsten"
+            );
 
             //import contract ABI and specify contract address
             var MoodContractAddress = "0x369E71897fe54e0a9Ca08Ac653a22346f75aE797";
@@ -58,10 +62,10 @@
                     "payable": false,
                     "constant": false
                 }
-            ]
+            ];
             
-            var MoodContract
-            var signer
+            var MoodContract;
+            var signer;
 
             //connect the signer to metamask account(use [0] as default), define contract object using contract address, ABI and signer
             provider.listAccounts().then(function (accounts){
