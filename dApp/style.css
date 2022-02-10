@@ -1,0 +1,55 @@
+body{
+    font: "Arial Black", Gadget, sans-serif;
+}
+
+.center{
+    text-align: center;
+}
+
+.title{
+    color: #002157;
+    font-size: 50px;
+}
+
+p{
+    font-size: 22px;
+}
+
+section{
+    display: block;
+    text-align: center;
+}
+
+.required{
+    margin-left: -70px;
+    font-size: 25px;
+}
+.required:after{
+    content: " *";
+    color: red;
+}
+
+div{
+    display: inline-block;
+    padding-left: 5px;
+}
+input[type=text]{
+    width: 13%;
+    border: 1px solid #002157;
+    border-radius: 5px;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+}
+
+button{
+    border: none;
+    outline: none;
+    padding: 14px 16px;
+    color: #ffffff;
+    background-color: #002157;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 100;
+    border-radius: 5px;
+}

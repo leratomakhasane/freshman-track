@@ -1,0 +1,32 @@
+[
+    {
+        "inputs": [],
+        "name": "getMood",
+        "outputs": [
+            {
+                "internalType": "string",
+                "name": "",
+                "type": "string"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function",
+        "payable": false,
+        "constant": true
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "string",
+                "name": "_mood",
+                "type": "string"
+            }
+        ],
+        "name": "setMood",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function",
+        "payable": false,
+        "constant": false
+    }
+]
